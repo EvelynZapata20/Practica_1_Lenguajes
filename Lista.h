@@ -14,7 +14,6 @@ private:
 public:
     Node();
     Node(int dato);
-    //Node(int data, Node* next);
     void setDato(int dato);
     void setNext(Node* siguiente);
     int getDato();
@@ -26,6 +25,7 @@ private:
     Node* cabeza;
 public:
     Lista();
+    void mostrarMenu();
     void insertarAlInicio(int dato);
     void insertarAlFinal(int dato);
     void mostrarLista();
@@ -33,13 +33,14 @@ public:
     void buscarPosicion(int pos);
     void sumaPromedioPares();
     void sumaPromedioImpares();
-    void calcularMenorMayor();
+    void calcularMenor();
+    void calcularMayor();
     void eliminarPorValor(int borrar);
-    void elimininarPosI(int num);
-    void eliminar_duplicados();
-    set <int> mostrar_repetidos();
+    void elimininarPos(int num);
+    void eliminarDuplicados();
+    set <int> mostrarRepetidos();
     void ordenarLista();
+    void invertirLista();
 };
-
 
 #endif //LEN_LISTA_H
