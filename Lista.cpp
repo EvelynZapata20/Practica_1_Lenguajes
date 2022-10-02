@@ -57,9 +57,10 @@ void Lista::mostrarMenu(){
         cout << "°|                 11. MOSTRAR MENOR                |°" << endl;
         cout << "°|          12. MOSTRAR ELEMENTOS REPETIDOS         |°" << endl;
         cout << "°|         13. ELIMINAR ELEMENTOS DUPLICADOS        |°" << endl;
-        cout << "°|            14. ORDENAR ASCENDENTEMENTE           |°" << endl;
-        cout << "°|                   15. INVERTIR                   |°" << endl;
-        cout << "°|                    16. SALIR                     |°" << endl;
+        cout << "°|          14. ORDENAR DE MANERA CRECIENTE         |°" << endl;
+        cout << "°|         15. ORDENAR DE MANERA DECRECIENTE        |°" << endl;
+        cout << "°|                   16. INVERTIR                   |°" << endl;
+        cout << "°|                    17. SALIR                     |°" << endl;
         cout << "° -------------------------------------------------- °" << endl;
     }
     else {
@@ -278,7 +279,7 @@ void Lista::eliminarDuplicados() {
     cout<<"Elementos duplicados eliminados correctamente\n"<<endl;
 }
 
-void Lista::ordenarLista() {
+void Lista::ordenarListaCreciente() {
     Node *actual = this->cabeza;
     Node *aux = nullptr;
     int dato;
@@ -295,7 +296,27 @@ void Lista::ordenarLista() {
 
         actual = actual->getNext();
     }
-    cout << "Lista ordenada correctamente\n" << endl;
+    cout << "Lista ordenada crecientemente\n" << endl;
+}
+
+void Lista::ordenarListaDecreciente(){
+    Node *actual = this->cabeza;
+    Node *aux = nullptr;
+    int dato;
+    while (actual != nullptr) {
+        aux = actual->getNext();
+        while (aux != nullptr) {
+            if (actual->getDato() < aux->getDato()) {
+                dato = actual->getDato();
+                actual->setDato(aux->getDato());
+                aux->setDato(dato);
+            }
+            aux = aux->getNext();
+        }
+
+        actual = actual->getNext();
+    }
+    cout << "Lista ordenada decrecientemente\n" << endl;
 }
 
 void Lista::invertirLista() {
