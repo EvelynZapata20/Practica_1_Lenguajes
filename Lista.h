@@ -39,8 +39,10 @@ public:
     void elimininarPos(int num);
     void eliminarDuplicados();
     set <int> mostrarRepetidos();
-    void ordenarLista();
+    void ordenarListaCreciente();
+    void ordenarListaDecreciente();
     void invertirLista();
 };
+
 
 #endif //LEN_LISTA_H
