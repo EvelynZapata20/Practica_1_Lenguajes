@@ -131,14 +131,18 @@ int main() {
         }
 
         else if(option==14){
-            newList->ordenarLista();
+            newList->ordenarListaCreciente();
         }
 
-        else if(option==15){
+         else if(option==15){
+             newList->ordenarListaDecreciente();
+         }
+
+        else if(option==16){
             newList->invertirLista();
         }
 
-         else if (option==16){
+         else if (option==17){
              flag=false;
              cout << "\n°|    ------------------------------------------    |°" << endl;
              cout << "°|                PROGRAMA FINALIZADO               |°" << endl;
@@ -150,5 +154,5 @@ int main() {
         }
 
     } while (flag==true);
-    
+
   }
